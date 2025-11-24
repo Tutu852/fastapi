@@ -107,7 +107,9 @@ def sort_Patients(
 
     sort_order = True if order == 'desc' else False
     # agar reverse true he desc order and agar reverse= false he the asc order me sort hoga
-    sorted_data = sorted(data.values(), key=lambda x: x.get(sort_by, 0), reverse=sort_order)
+    sorted_data = sorted(data.values(), 
+                         key=lambda x: x.get(sort_by, 0), 
+                         reverse=sort_order)
 
     return sorted_data
 
