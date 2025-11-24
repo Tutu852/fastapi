@@ -23,6 +23,7 @@ class Patient(BaseModel):
         return self
 
     @field_validator('email')
+    # you want to work with class-level data, not object data.
     @classmethod
     def validate_email(cls, value):
         valid_domains = ["gmail.com", "yahoo.com", "outlook.com"]
