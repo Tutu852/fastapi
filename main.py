@@ -84,7 +84,7 @@ def view():
 def view_patient(patient_id: str = Path(..., description='ID of the patient in the DB', example='P001')):
     # load all the patient
     data = load_data()
-
+    # it is checking patient_id key present he ki nehni data
     if patient_id in data:
         return data[patient_id]
     raise HTTPException(status_code=404, detail='Patient not found')
