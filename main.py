@@ -78,6 +78,7 @@ def view():
     return data
 
 
+
 @app.get("/patient/{patient_id}")
 # ... means required
 # using path function i am improving my readbility
